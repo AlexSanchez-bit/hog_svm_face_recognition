@@ -5,7 +5,7 @@ cap = cv2.VideoCapture(0)
 
 def draw_boxes(frame, boxes):
     for (x1, y1, x2, y2, score) in boxes:
-        cv2.rectangle(frame, (x1-100, y1), (x2, y2+100), (0, 255, 0), 2)
+        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
         cv2.putText(
             frame,
             f"{score:.2f}",

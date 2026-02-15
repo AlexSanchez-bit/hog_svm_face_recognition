@@ -7,8 +7,8 @@ svm = get_svm()
 
 WINDOW_SIZE = (32, 32)
 STEP = 12
-SCALE = 3
-THRESHOLD = 0.2
+SCALE = 1.03
+THRESHOLD = 0.5
 
 #reducing image scale
 def image_pyramid(img, scale=1.25, min_size=(64, 64)):
