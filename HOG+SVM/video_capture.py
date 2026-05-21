@@ -9,7 +9,7 @@ def draw_boxes(frame, boxes):
         cv2.putText(
             frame,
             f"{score:.2f}",
-            (x1, y1 - 5),
+            (x1, y1 - 10),
             cv2.FONT_HERSHEY_SIMPLEX,
             0.5,
             (0, 255, 0),
@@ -27,10 +27,10 @@ while True:
     scaled_boxes = []
     for (x1, y1, x2, y2, score) in detections:
         scaled_boxes.append((
-            int(x1 * 2),
-            int(y1 * 2),
-            int(x2 * 2),
-            int(y2 * 2),
+            int(x1 * 4),
+            int(y1 * 4),
+            int(x2 * 4),
+            int(y2 * 4),
             score
         ))
 

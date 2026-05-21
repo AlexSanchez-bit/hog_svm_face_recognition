@@ -22,7 +22,7 @@ def image_pyramid(img, scale=1.25, min_size=(64, 64)):
         yield img
 
 #sliding window over image
-def sliding_window(img, step=8, window_size=(64, 64)):
+def sliding_window(img, step=3, window_size=(64, 64)):
     for y in range(0, img.shape[0] - window_size[1], step):
         for x in range(0, img.shape[1] - window_size[0], step):
             yield (x, y, img[y:y+window_size[1], x:x+window_size[0]])
